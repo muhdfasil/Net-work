@@ -1,0 +1,9 @@
+#!/bin/bash
+echo "Enter two number"
+read a b
+if [[ $a -gt $b ]]
+then
+echo "First number is grater"
+else
+echo "Second number is grater"
+fi

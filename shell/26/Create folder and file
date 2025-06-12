@@ -1,0 +1,17 @@
+#!/bin/bash
+read -p "Enter folder,file name : " folder file
+if [ -d $folder ]
+then
+echo "$folder exist"
+else
+echo "folder created "
+mkdir $folder
+fi
+if [ -f $file ]
+then
+echo "file already exist"
+rm $file
+touch $file
+else
+touch $file
+fi

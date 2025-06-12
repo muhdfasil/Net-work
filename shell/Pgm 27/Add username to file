@@ -1,0 +1,18 @@
+#!/bin/bash
+read -p "Enter filename and name to add : " file name
+if [ -f $file ]
+then 
+echo "File exist"
+else
+touch $file
+echo "file created"
+fi
+flag=$(cat $file | grep  $name | wc -w)
+if (( flag > 0 ))
+then
+echo "$name already present"
+else
+echo "$name added to $file"
+echo "$name" >> $file
+fi  
+
